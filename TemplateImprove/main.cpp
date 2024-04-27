@@ -87,7 +87,7 @@ TEST(CreateArrayTest, TwoDimensionalArrayValues) {
 }
 
 int main(int argc, char** argv) {
-    // Приклад 1: Створення одновимірного масиву
+
     int value = 0x21;
     void* array1 = CreateArrayAtMemory<int>(5);
     std::cout << "Size of array 1: " << 5 * sizeof(int) << " bytes" << std::endl;
@@ -100,7 +100,6 @@ int main(int argc, char** argv) {
     }
     std::cout << std::endl;
 
-    // Приклад 2: Створення двовимірного масиву
     void* array2 = CreateArrayAtMemory<double>(3, 4, 5);
     std::cout << "Size of array 2: " << 3 * 4 * 5 * sizeof(double) << " bytes" << std::endl;
     double*** doubleArray2 = static_cast<double***>(array2);
